@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First Name Input</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>First Name</h1>
+  <input type="text" id="nameInput" placeholder="Enter your first name" />
+
+  <script>
+    document.getElementById("nameInput").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        const input = event.target.value.trim().toLowerCase();
+        if (input === "jabari") {
+          window.location.href = "jabari.html";
+        }
+      }
+    });
+  </script>
+</body>
+</html>
